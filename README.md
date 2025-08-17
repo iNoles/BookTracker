@@ -19,7 +19,11 @@ A full-stack book tracker built with Vue 3, TypeScript, TailwindCSS for the fron
 
 ## 📸 Screenshots
 
-Coming Soon
+### Backend
+![Backend](screenshots/backend.png)
+
+### Main Book Grid
+![Book Grid](screenshots/main-grid.png)
 
 ## ⚡ Tech Stack
 
