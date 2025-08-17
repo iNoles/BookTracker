@@ -12,7 +12,7 @@ obj/
 *.log
 
 appsettings.Development.json
-appsettings.*.json
+appsettings.json
 
 # Database
 *.db
