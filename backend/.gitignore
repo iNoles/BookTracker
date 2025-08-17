@@ -11,6 +11,8 @@ obj/
 # Logs
 *.log
 
+.DS_Store
+
 appsettings.Development.json
 appsettings.json
 
