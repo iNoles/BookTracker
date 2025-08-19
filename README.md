@@ -62,13 +62,11 @@ Frontend
 # Navigate to frontend folder
 cd frontend
 
-# Install dependencies (using Bun or npm)
+# Install dependencies
 bun install
-# or
-npm install
 
 # Run dev server
-npm run dev
+bun run dev
 ```
 Visit http://localhost:5173 (or your terminal output) to see the app.
 

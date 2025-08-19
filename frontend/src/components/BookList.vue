@@ -9,18 +9,8 @@ const emit = defineEmits<{
   (e: 'edit', book: Book): void
   (e: 'delete', id: number): void
 }>()
-
-function addBook() {
-  alert('Add Book clicked!')
-}
 </script>
 <template>
-<header class="bg-blue-600 text-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-center">
-      <h1 class="text-2xl font-bold tracking-wide">Book Tracker</h1>
-    </div>
-  </header>
-
   <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     <div 
       v-for="book in books" 
@@ -60,13 +50,5 @@ function addBook() {
       </div>
     </div>
   </div>
-
-  <!-- Floating Action Button -->
-  <button
-    class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-16 h-16 shadow-lg flex items-center justify-center text-3xl transition-colors duration-200"
-    @click="addBook"
-  >
-    +
-  </button>
 </template>
 
