@@ -19,7 +19,9 @@ const localBook = ref<Book>({
   title: '',
   author: '',
   genre: '',
-  isRead: false,
+  note: '',
+  rating: 0,
+  status: 0,
 })
 
 // Sync localBook whenever prop changes
@@ -29,7 +31,14 @@ watch(
     if (newBook) {
       localBook.value = { ...newBook }
     } else {
-      localBook.value = { title: '', author: '', genre: '', isRead: false }
+      localBook.value = {
+        title: '',
+        author: '',
+        genre: '',
+        note: '',
+        rating: 0,
+        status: 0,
+      }
     }
   },
   { immediate: true }
@@ -66,9 +75,25 @@ function cancel() {
           <label class="block text-gray-700 font-medium mb-1">Genre</label>
           <input v-model="localBook.genre" type="text" class="w-full px-4 py-2 border rounded-lg" />
         </div>
-        <div class="flex items-center">
-          <input v-model="localBook.isRead" type="checkbox" id="isRead" class="mr-2" />
-          <label for="isRead">Mark as Read</label>
+        <div>
+            <label class="block text-gray-700 font-medium mb-1">Notes</label>
+          <textarea v-model="localBook.notes" class="w-full border rounded p-2"></textarea>
+        </div>
+        <div>
+            <label class="block text-gray-700 font-medium mb-1">Rating</label>
+          <select v-model.number="localBook.rating" class="w-full border rounded p-2">
+            <option :value="null">No rating</option>
+            <option v-for="n in 5" :key="n" :value="n">{{ n }} ⭐</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Status</label>
+          <select v-model="localBook.status" class="border w-full p-2 mb-4">
+            <option value="0">Not Started</option>
+            <option value="1">Reading</option>
+            <option value="2">Finished</option>
+            <option value="3">Abandoned</option>
+          </select>
         </div>
 
         <div class="flex justify-end gap-3">
