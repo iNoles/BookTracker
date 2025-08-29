@@ -20,4 +20,6 @@ appsettings.json
 
 # Commit Migrations, but not the generated DB
 # migrations/ stays!
-!Migrations/
+Migrations/
+
+publish/

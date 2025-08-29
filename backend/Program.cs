@@ -20,13 +20,19 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173") // Bun/Vite dev server
+        policy.WithOrigins("http://localhost:5173", "https://inoles.github.io/booktracker/")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.EnsureCreated(); // creates DB file and tables if missing
+}
 
 app.UseHttpsRedirection();
 
