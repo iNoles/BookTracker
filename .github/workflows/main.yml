@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           # Upload dist folder
-          path: './frotend/dist'
+          path: './frontend/dist'
           
       - name: Deploy to GitHub Pages
         id: deployment
