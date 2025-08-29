@@ -1,7 +1,7 @@
 import axios from 'axios'
 import type { Book } from './types/Book'
 
-const API_URL = 'http://booktracker.runasp.net/api/books'
+const API_URL = 'https://booktracker.runasp.net/api/books'
 
 export async function getBooks(): Promise<Book[]> {
   const res = await axios.get<Book[]>(API_URL)
