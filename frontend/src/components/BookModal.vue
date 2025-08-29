@@ -19,7 +19,7 @@ const localBook = ref<Book>({
   title: '',
   author: '',
   genre: '',
-  note: '',
+  notes: '',
   rating: 0,
   status: 0,
 })
@@ -35,7 +35,7 @@ watch(
         title: '',
         author: '',
         genre: '',
-        note: '',
+        notes: '',
         rating: 0,
         status: 0,
       }
