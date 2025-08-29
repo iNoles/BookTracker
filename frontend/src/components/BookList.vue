@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Book } from '../types/Book'
+import type { Book, ReadingStatus } from '../types/Book'
 
 defineProps<{
   books: Book[]
