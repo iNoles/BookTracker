@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { Book } from './Book'
+import type { Book } from './types/Book'
 
 const API_URL = 'http://booktracker.runasp.net/api/books'
 
