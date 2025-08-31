@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Book, ReadingStatus } from '../types/Book'
-
+import { ReadingStatusEnum } from '../types/Book'
+  
 defineProps<{
   books: Book[]
 }>()
@@ -13,9 +14,9 @@ const emit = defineEmits<{
 // Map numeric status to display string
 function statusText(status: ReadingStatus) {
   switch (status) {
-    case ReadingStatus.Reading: return 'Reading'
-    case ReadingStatus.Finished: return 'Finished'
-    case ReadingStatus.Abandoned: return 'Abandoned'
+    case ReadingStatusEnum.Reading: return 'Reading'
+    case ReadingStatusEnum.Finished: return 'Finished'
+    case ReadingStatusEnum.Abandoned: return 'Abandoned'
     default: return 'Not Started'
   }
 }
@@ -23,9 +24,9 @@ function statusText(status: ReadingStatus) {
 // Map numeric status to Tailwind badge colors
 function statusColor(status: ReadingStatus) {
   switch (status) {
-    case ReadingStatus.Reading: return 'bg-yellow-100 text-yellow-700 border-yellow-300'
-    case ReadingStatus.Finished: return 'bg-green-100 text-green-700 border-green-300'
-    case ReadingStatus.Abandoned: return 'bg-red-100 text-red-700 border-red-300'
+    case ReadingStatusEnum.Reading: return 'bg-yellow-100 text-yellow-700 border-yellow-300'
+    case ReadingStatusEnum.Finished: return 'bg-green-100 text-green-700 border-green-300'
+    case ReadingStatusEnum.Abandoned: return 'bg-red-100 text-red-700 border-red-300'
     default: return 'bg-gray-100 text-gray-700 border-gray-300'
   }
 }
