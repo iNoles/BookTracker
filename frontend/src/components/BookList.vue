@@ -13,9 +13,9 @@ const emit = defineEmits<{
 // Map numeric status to display string
 function statusText(status: ReadingStatus) {
   switch (status) {
-    case 1: return 'Reading'
-    case 2: return 'Finished'
-    case 3: return 'Abandoned'
+    case ReadingStatus.Reading: return 'Reading'
+    case ReadingStatus.Finished: return 'Finished'
+    case ReadingStatus.Abandoned: return 'Abandoned'
     default: return 'Not Started'
   }
 }
@@ -23,10 +23,9 @@ function statusText(status: ReadingStatus) {
 // Map numeric status to Tailwind badge colors
 function statusColor(status: ReadingStatus) {
   switch (status) {
-    case 1: return 'bg-yellow-100 text-yellow-700 border-yellow-300'
-    case 2: return 'bg-green-100 text-green-700 border-green-300'
-    case 3: return 'bg-red-100 text-red-700 border-red-300'
-    case 0:
+    case ReadingStatus.Reading: return 'bg-yellow-100 text-yellow-700 border-yellow-300'
+    case ReadingStatus.Finished: return 'bg-green-100 text-green-700 border-green-300'
+    case ReadingStatus.Abandoned: return 'bg-red-100 text-red-700 border-red-300'
     default: return 'bg-gray-100 text-gray-700 border-gray-300'
   }
 }
