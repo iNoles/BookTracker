@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import type { Book } from '../types/Book'
+import { ReadingStatusEnum } from '../types/Book'
 
 // Props
 const props = defineProps<{
@@ -21,7 +22,7 @@ const localBook = ref<Book>({
   genre: '',
   notes: '',
   rating: 0,
-  status: 0,
+  status: ReadingStatusEnum.NotStarted,
 })
 
 // Sync localBook whenever prop changes
@@ -37,12 +38,17 @@ watch(
         genre: '',
         notes: '',
         rating: 0,
-        status: 0,
+        status: ReadingStatusEnum.NotStarted,
       }
     }
   },
   { immediate: true }
 )
+
+// Format enum keys for display: "NotStarted" → "Not Started"
+function formatStatus(key: string) {
+  return key.replace(/([A-Z])/g, ' $1').trim()
+}
 
 // Save handler
 function save() {
@@ -89,10 +95,13 @@ function cancel() {
         <div>
           <label class="block text-gray-700 font-medium mb-1">Status</label>
           <select v-model="localBook.status" class="border w-full p-2 mb-4">
-            <option value="0">Not Started</option>
-            <option value="1">Reading</option>
-            <option value="2">Finished</option>
-            <option value="3">Abandoned</option>
+            <option
+              v-for="[key, value] in Object.entries(ReadingStatusEnum)"
+              :key="key"
+              :value="value"
+            >
+              {{ formatStatus(key) }}
+            </option>
           </select>
         </div>
 
