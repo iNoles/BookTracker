@@ -1,1 +1,27 @@
 .DS_Store
+
+bin/
+obj/
+*.user
+*.vspscc
+*.vscode/
+*.suo
+*.userosscache
+*.sln.docstates
+*.swp
+
+# Logs
+*.log
+
+appsettings.Development.json
+appsettings.json
+
+# Database
+*.db
+*.db-journal
+
+# Commit Migrations, but not the generated DB
+# migrations/ stays!
+Migrations/
+
+publish/

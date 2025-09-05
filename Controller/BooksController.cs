@@ -1,7 +1,9 @@
+using BookTrackerAPI.Data;
+using BookTrackerAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookTrackerAPI;
+namespace BookTrackerAPI.Controller;
 
 [ApiController]
 [Route("api/[controller]")]

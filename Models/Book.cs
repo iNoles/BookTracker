@@ -1,4 +1,4 @@
-namespace BookTrackerAPI;
+namespace BookTrackerAPI.Models;
 
 public enum ReadingStatus
 {
