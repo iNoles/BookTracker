@@ -1,7 +1,7 @@
-using BookTrackerAPI.Models;
+using BookTracker.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookTrackerAPI.Data;
+namespace BookTracker.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

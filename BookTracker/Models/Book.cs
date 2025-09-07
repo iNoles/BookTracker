@@ -1,12 +1,4 @@
-namespace BookTrackerAPI.Models;
-
-public enum ReadingStatus
-{
-    NotStarted,
-    Reading,
-    Finished,
-    Abandoned
-}
+namespace BookTracker.Models;
 
 public class Book
 {
