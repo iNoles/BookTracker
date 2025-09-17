@@ -31,7 +31,7 @@ A full-stack .NET 9 application with Vue for managing book items. The applicatio
 ## Tech Stack
 
 - .NET 9
-- ASP.NET Core Web API
+- ASP.NET Core Web API / MVC
 - Entity Framework Core 9.0
 - SQLite Database
 - xUnit for Testing
