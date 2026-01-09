@@ -1,4 +1,4 @@
-# Book Tracker App
+# BookTracker – Full-Stack Web Application
 
 ![Vue.js](https://img.shields.io/badge/Vue-3.5.18-brightgreen?logo=vue.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue?logo=typescript&logoColor=white)
@@ -8,14 +8,28 @@
 
 A full-stack .NET 9 application with Vue for managing book items. The application follows the controller/service/repository pattern, utilizing Entity Framework Core for persistence, and includes a comprehensive test suite.
 
-## 🖥 Features
+## Technologies Used
 
-- Add Book Items: Create new book items with title, author, genre, notes, rating, and status
-- List Book Items: View all book items
-- Edit Books Items: Update existing book items
-- Delete Book Items: Remove book items
-- Data Persistence: All data is persisted to a SQLite database using EF Core
-- Seeded Data: Application starts with 3 pre-loaded book items
+- **Backend**: ASP.NET Core Web API, Entity Framework Core, SQLite
+- **Frontend**: Vue 3, TypeScript, Tailwind CSS
+- **Testing**: xUnit (backend unit tests)
+- **Tools**: Git, GitHub, Visual Studio Code
+
+## Features
+
+- **Full CRUD functionality**: Add, view, edit, and delete books
+- **Persistent storage**: Data stored in SQLite database via Entity Framework Core
+- **Responsive UI**: Dynamic frontend built with Vue and Tailwind
+- **API integration**: Frontend communicates with backend via RESTful endpoints
+- **Automated testing**: Unit tests validate backend logic and data integrity
+
+## Key Skills Demonstrated
+
+- Full-stack development and end-to-end application design
+- Designing and implementing RESTful APIs
+- Database modeling and querying with Entity Framework Core
+- Frontend state management and dynamic rendering with Vue 3
+- Writing maintainable, testable code using professional practices
 
 ## Screenshots
 
@@ -27,16 +41,6 @@ A full-stack .NET 9 application with Vue for managing book items. The applicatio
 
 ### Edit Book
 ![Edit Book](screenshots/edit-book.png)
-
-## Tech Stack
-
-- .NET 9
-- ASP.NET Core Web API / MVC
-- Entity Framework Core 9.0
-- SQLite Database
-- xUnit for Testing
-- Vue 3 + TypeScript
-- TailwindCSS for Styling
 
 ## Getting Started
 
@@ -81,6 +85,13 @@ The application exposes REST API endpoints:
 - `POST /api/books` - Create new book item
 - `PUT /api/books/{id}` - Update book item
 - `DELETE /api/books/{id}` - Delete book item
+
+## Demonstration of Professional Practices
+
+- Structured development using Git branches and commits
+- Documentation of setup, usage, and architecture
+- Separation of frontend and backend concerns, reflecting real-world full-stack projects
+- Implementation of automated unit tests for backend endpoints
 
 ## Notes
 
