@@ -6,7 +6,7 @@
 ![.NET](https://img.shields.io/badge/.NET-9.0-blue?logo=dotnet&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-3.41.2-lightgrey?logo=sqlite&logoColor=white)
 
-A full-stack .NET 9 application with Vue for managing book items. The application follows the controller/service/repository pattern, utilizing Entity Framework Core for persistence, and includes a comprehensive test suite.
+BookTracker is a full-stack web application for managing a personal book collection. It demonstrates end-to-end development, including backend API design, database integration, and frontend UI implementation.
 
 ## Technologies Used
 
